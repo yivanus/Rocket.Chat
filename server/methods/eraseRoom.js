@@ -1,9 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
-import { roomTypes } from 'meteor/rocketchat:utils';
-import { hasPermission } from 'meteor/rocketchat:authorization';
-import { Rooms, Messages, Subscriptions } from 'meteor/rocketchat:models';
-import { Apps } from 'meteor/rocketchat:apps';
+import { roomTypes } from '/app/utils';
+import { hasPermission } from '/app/authorization';
+import { Rooms, Messages, Subscriptions } from '/app/models';
+import { Apps } from '/app/apps';
 
 Meteor.methods({
 	eraseRoom(rid) {

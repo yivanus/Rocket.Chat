@@ -3,7 +3,7 @@ import { Mongo } from 'meteor/mongo';
 // Revert change from Meteor 1.6.1 who set ignoreUndefined: true
 // more information https://github.com/meteor/meteor/pull/9444
 let mongoOptions = {
-	ignoreUndefined: false,
+	ignoreUndefined: true,
 };
 
 const mongoOptionStr = process.env.MONGO_OPTIONS;

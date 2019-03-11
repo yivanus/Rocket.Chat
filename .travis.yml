@@ -73,16 +73,18 @@ before_deploy:
 - ".travis/namefiles.sh"
 # - echo ".travis/sandstorm.sh"
 deploy:
-  - provider: s3
-    access_key_id: AKIAIKIA7H7D47KUHYCA
-    secret_access_key: "$ACCESSKEY"
-    bucket: download.rocket.chat
-    skip_cleanup: true
-    upload_dir: build
-    local_dir: "$ROCKET_DEPLOY_DIR"
-    on:
-      condition: "$TRAVIS_PULL_REQUEST=false"
-      all_branches: true
+  skip_cleanup: true
+  - echo "deploy"
+  # - provider: s3
+  #   access_key_id: AKIAIKIA7H7D47KUHYCA
+  #   secret_access_key: "$ACCESSKEY"
+  #   bucket: download.rocket.chat
+  #   skip_cleanup: true
+  #   upload_dir: build
+  #   local_dir: "$ROCKET_DEPLOY_DIR"
+  #   on:
+  #     condition: "$TRAVIS_PULL_REQUEST=false"
+  #     all_branches: true
   # - provider: releases
   #   api-key: "$GITHUB_TOKEN"
   #   file_glob: true

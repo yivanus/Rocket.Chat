@@ -72,9 +72,9 @@ before_deploy:
 # - ".travis/setupsig.sh"
 - ".travis/namefiles.sh"
 # - echo ".travis/sandstorm.sh"
-deploy:
-  skip_cleanup: true
-  - echo "deploy"
+# deploy:
+#   skip_cleanup: true
+#   - echo "deploy"
   # - provider: s3
   #   access_key_id: AKIAIKIA7H7D47KUHYCA
   #   secret_access_key: "$ACCESSKEY"
